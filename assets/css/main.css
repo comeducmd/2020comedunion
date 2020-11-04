@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: space-around;
+}
+
+.custom-card {
+    width: 20rem;
+    margin: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)!important
+}
+
+@media(max-width:850px) {
+    .custom-card {
+        width: 80%;
+        height: 90vh;
+    }
+    .custom-card img {
+        height: 60vh;
+        width: auto!important;
+        margin: 0px auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
