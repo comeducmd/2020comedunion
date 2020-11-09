@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -11,12 +11,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </head>
 
 <body>
-    <header style="height:4rem; width:100%; position:fixed; top:0; background-color:blue; z-index:100;">
-        header
+    <header>
+        <div class="header-wrapper">
+            <nav>
+            <div class="nav-wrapper">
+                <img src="./images/skku_longLogo.png" width="200">
+                컴퓨터교육과
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                        <li><a href="#"  title="SIGN IN" >SIGN IN</a></li>
+                        <li>|</li>
+                        <li><a href="#"  title="SIGN UP">SIGN UP</a></li>
+                </ul>
+                </div>
+            </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+ <!--   
+            <div class="logo-header-box">
+                <a class="logo mobile-hide" href="#">
+                    <h1>
+                        <span>
+                            <img src="./images/skku_longLogo.png" width="200">
+                        </span>
+                        컴퓨터교육과
+                    </h1>
+                </a>
+            </div>
+            <div class="menu-header-box">
+                <ul>
+                    <li><a href="#"  title="SIGN IN" >SIGN IN</a></li>
+                    |
+                    <li><a href="#"  title="SIGN UP">SIGN UP</a></li>
+                </ul>
+            </div>
+            <ul class="sidenav" id="mobile-demo">
+                    <li><a href=#>2020</a></li>
+        </div>
     </header>
+-->
+    <div id="banner">
+        <div class="container">
+            <div class="title">
+                <div class="title-logo">
+                       
+                </div>
+                <h2>COMEDUNION</h2>
+                <span class="byline">SKKU Computer Education Learning Fair</span> </div>
+            <ul class="actions">
+                <li><a href="#" class="button">Computer Education, Sungkyunkwan University</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav">
+        
+            <nav>
+                    <div class="nav-wrapper">
+                      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href=#>2020</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                
+                  <ul class="sidenav" id="mobile-demo">
+                        <li><a href=#>2020</a></li>
+
+                  </ul>
+    </div>
+
+
     <div style="display: flex; justify-content:center; padding-top:5rem; padding-bottom:5rem;">
         <div id="container">
             <div class="card custom-card">
