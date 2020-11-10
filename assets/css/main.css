@@ -1,8 +1,8 @@
-@font-face {
-    font-family: 'MaruBuri-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: rgb(248, 248, 248);
 }
 
 html {
@@ -20,7 +20,7 @@ html::-webkit-scrollbar {
 
 /* header */
 
-.header-wrapper {
+header-wrapper {
     background: #333333;
     height: 60px;
     position: relative;
@@ -38,14 +38,12 @@ html::-webkit-scrollbar {
     margin: 8px 0 0 8px;
     font-weight: 700;
     font-size: 27px;
-    color: #fff;
     vertical-align: middle;
 }
 
 .menu-header-box {
     position: relative;
     float: right;
-    color: #FFF;
 }
 
 .menu-header-box ul li {
@@ -56,7 +54,7 @@ html::-webkit-scrollbar {
 }
 
 .menu-header-box ul li a {
-    color: #FFF;
+    font-weight: bold;
 }
 
 
@@ -68,7 +66,6 @@ html::-webkit-scrollbar {
     background-image: url('../../frontend/images/banner.jpg');
     background-size: cover;
     text-align: center;
-    color: rgba(255, 255, 255, .8);
 }
 
 #banner .title {
@@ -76,19 +73,16 @@ html::-webkit-scrollbar {
     text-transform: uppercase !important;
 }
 
-#banner .title h2 {
-    color: #FFF;
-}
-
 #banner .title .byline {
-    color: rgba(255, 255, 255, .6);
+    color: #fff;
+    font-size: 1.4em;
 }
 
 
 /* nav */
 
 nav {
-    background-color: aqua;
+    background-color: #073c64;
 }
 
 #container {
@@ -99,8 +93,23 @@ nav {
     justify-content: space-around;
 }
 
+div.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #073c64;
+}
+
+img.skku_longLogo {
+    width: 170px;
+    height: auto;
+}
+
+.major {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
 .custom-card {
-    font-family: 'MaruBuri-Regular', sans-serif;
     border-radius: 2rem;
     width: 21rem;
     margin: 1rem;
@@ -146,4 +155,10 @@ nav {
     .custom-card {
         width: 23rem;
     }
+}
+
+/* Main (Card) */
+
+span.card-title.grey-text.text-darken-4 {
+    font-weight: bold;
 }
