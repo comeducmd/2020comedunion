@@ -1,8 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
 body {
     font-family: "Noto Sans KR", sans-serif;
-    background-color: rgb(248, 248, 248);
+    background: linear-gradient(rgb(240, 241, 247), rgb(193, 193, 204));
 }
 
 html {
@@ -88,6 +87,7 @@ img.skku_longLogo {
     font-weight: bold;
 }
 
+
 /* nav */
 
 nav {
@@ -145,8 +145,17 @@ div.nav-wrapper {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+    .custom-card .card-reveal img {
+        height: 40vh;
+    }
     .custom-card-action {
         font-size: 1.7rem;
+    }
+    img.main_logo {
+        width: 95%;
+    }
+    span.major {
+        font-size: 1rem;
     }
 }
 
@@ -156,14 +165,26 @@ div.nav-wrapper {
     }
 }
 
+
 /* Main (Card) */
 
 span.card-title.grey-text.text-darken-4 {
     font-weight: bold;
 }
 
+
 /* Drag */
+
 ::selection {
     background-color: black;
     color: #fff;
+}
+
+@media(max-width:500px) {
+    img {
+        overflow: hidden;
+    }
+    div.custom-card-action {
+        font-size: 1rem;
+    }
 }
