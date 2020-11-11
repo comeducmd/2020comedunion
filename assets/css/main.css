@@ -162,3 +162,9 @@ img.skku_longLogo {
 span.card-title.grey-text.text-darken-4 {
     font-weight: bold;
 }
+
+/* Drag */
+::selection {
+    background-color: black;
+    color: #fff;
+}
