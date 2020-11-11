@@ -78,6 +78,15 @@ header-wrapper {
     font-size: 1.4em;
 }
 
+img.skku_longLogo {
+    width: 170px;
+    height: auto;
+}
+
+.major {
+    font-size: 1.6em;
+    font-weight: bold;
+}
 
 /* nav */
 
@@ -97,16 +106,6 @@ div.nav-wrapper {
     display: flex;
     justify-content: space-between;
     background-color: #073c64;
-}
-
-img.skku_longLogo {
-    width: 170px;
-    height: auto;
-}
-
-.major {
-    font-size: 1.6em;
-    font-weight: bold;
 }
 
 .custom-card {

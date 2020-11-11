@@ -1,0 +1,71 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: rgb(248, 248, 248);
+}
+
+html {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
+
+/* header */
+
+header-wrapper {
+    background: #333333;
+    height: 60px;
+    position: relative;
+    padding: 0em 0em;
+}
+
+.logo-header-box {
+    height: 60px;
+    position: relative;
+}
+
+.logo-header-box a.logo h1 {
+    position: relative;
+    display: inline-block;
+    margin: 8px 0 0 8px;
+    font-weight: 700;
+    font-size: 27px;
+    vertical-align: middle;
+}
+
+.menu-header-box {
+    position: relative;
+    float: right;
+}
+
+.menu-header-box ul li {
+    margin: 10px 0 0 0;
+    display: inline-block;
+    padding: 0 7px;
+    line-height: 1;
+}
+
+.menu-header-box ul li a {
+    font-weight: bold;
+}
+
+img.skku_longLogo {
+    width: 170px;
+    height: auto;
+}
+
+.major {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+div.nav-wrapper {
+    background-color: #073c64;
+}
