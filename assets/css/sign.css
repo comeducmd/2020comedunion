@@ -69,3 +69,42 @@ img.skku_longLogo {
 div.nav-wrapper {
     background-color: #073c64;
 }
+
+/* Login Part */
+
+#login_table {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -135px;
+    margin-left: -220px;
+    padding: 30px;
+    width: 440px;
+    height: 270px;
+    text-align: center;
+    color: #073c64;
+    border-style: solid;
+    border-color: #073c64;
+    border-width: 2px;
+}
+
+#login_table > h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#login_table > h4 {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#login_table > img {
+    width: 260px;
+    height: auto;
+}
+
+/* Drag */
+::selection {
+    background-color: black;
+    color: #fff;
+}
