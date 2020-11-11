@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 body {
     font-family: "Noto Sans KR", sans-serif;
-    background: linear-gradient(rgb(240, 241, 247), rgb(193, 193, 204));
+    background: linear-gradient(rgb(240, 241, 247), rgb(221, 221, 231));
 }
 
 html {
@@ -98,7 +98,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1250px;
     justify-content: space-around;
 }
 
@@ -112,6 +112,7 @@ div.nav-wrapper {
     border-radius: 2rem;
     width: 21rem;
     margin: 1rem;
+    margin-bottom: 3.2rem!important;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06)!important
 }
 
@@ -136,6 +137,7 @@ div.nav-wrapper {
 @media(max-width:890px) {
     .custom-card {
         width: 70%;
+        margin-bottom: 2rem;
     }
     .custom-card img {
         height: auto;
