@@ -135,18 +135,14 @@ div.nav-wrapper {
 
 @media(max-width:890px) {
     .custom-card {
-        width: 80%;
-        height: 85vh;
+        width: 70%;
     }
     .custom-card img {
-        height: 50vh;
-        width: auto!important;
+        height: auto;
+        width: 75%!important;
         margin: 0px auto;
         margin-top: 2rem;
         margin-bottom: 2rem;
-    }
-    .custom-card .card-reveal img {
-        height: 40vh;
     }
     .custom-card-action {
         font-size: 1.7rem;
@@ -181,10 +177,11 @@ span.card-title.grey-text.text-darken-4 {
 }
 
 @media(max-width:500px) {
-    img {
-        overflow: hidden;
+    .custom-card {
+        width: 90%;
     }
     div.custom-card-action {
-        font-size: 1rem;
+        font-size: 1.4rem;
+        bottom: 0;
     }
 }
