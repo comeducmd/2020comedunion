@@ -44,6 +44,7 @@ PROJECT_APPS = [
     "users.apps.UsersConfig",
     "posts.apps.PostsConfig",
     "recommends.apps.RecommendsConfig",
+    "core.apps.CoreConfig",
 ]
 
 THIRD_PARTY_APPS = []
