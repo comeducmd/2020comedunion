@@ -1,23 +1,36 @@
 <div class="card custom-card">
-    <div class="card-image">
-        <img class="materialboxed" width="650" src="../images/skku_logo.png" alt="썸네일">
-    </div>
-    <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">{{post.title}}</span>
-        <i class="material-icons right" style="cursor:pointer;">favorite_border</i>
-        <p class="activator">{{post.description}}</p>
-    </div>
-    <div class="card-action custom-card-action">
-        <a href="#">Code</a>
-        <a href="#">Site</a>
-        <a href="#">발표 영상</a>
-    </div>
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">{{post.title}}<i class="material-icons right">close</i></span>
-        <img class="materialboxed custom-img" src="../images/skku.jpg" width="650" alt="구체적사진">
-        <p>{{post.description}}</p>
-        <p>{{post.team_name}}</p>
-        <p>{{post.team_member}}</p>
-        
-    </div>
+  <div class="card-image">
+    <img
+      class="materialboxed"
+      width="650"
+      src="./static/skku_logo.png"
+      alt="썸네일"
+    />
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4"
+      >{{post.title}}</span
+    >
+    <i class="material-icons right" style="cursor: pointer">favorite_border</i>
+    <p class="activator">{{post.description}}</p>
+  </div>
+  <div class="card-action custom-card-action">
+    <a href="#">Code</a>
+    <a href="#">Site</a>
+    <a href="#">발표 영상</a>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4"
+      >{{post.title}}<i class="material-icons right">close</i></span
+    >
+    <img
+      class="materialboxed custom-img"
+      src="./static/skku.jpg"
+      width="650"
+      alt="구체적사진"
+    />
+    <p>{{post.description}}</p>
+    <p>{{post.team_name}}</p>
+    <p>{{post.team_member}}</p>
+  </div>
 </div>
