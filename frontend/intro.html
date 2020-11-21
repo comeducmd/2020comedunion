@@ -13,6 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/static/css/intro.css" />
+    <link rel="stylesheet" href="/static/css/video.css" />
   </head>
 
   <body>
@@ -21,13 +22,24 @@
       <h3 class="title">성균관대학교 컴퓨터교육과</h3>
       <br /><br />
       <div class="logo">
-        <img src="/static/logo2.png" style="width: 380px" />
+        <img src="/static/images/logo2.png" style="width: 380px" />
       </div>
       <br /><br />
       <div class="link-1">
-        <a href="#">
+        <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
           <span class="thick">축전 영상</span><span class="thin"> 보기</span>
         </a>
+        <div id="light" class="white_content">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br /><br />
+          <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">닫기</a>
+        </div>
+        <div id="fade" class="black_overlay"></div>
+        <!-- <a href="#">
+          <span class="thick">축전 영상</span><span class="thin"> 보기</span>
+        </a> -->
       </div>
       |
       <div class="link-1">
