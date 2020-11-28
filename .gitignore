@@ -145,3 +145,6 @@ cython_debug/
 
 # private data
 my_settings.py
+
+# frontend bak up
+frontend/static/*
