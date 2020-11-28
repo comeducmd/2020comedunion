@@ -1,11 +1,13 @@
 <div class="card custom-card">
   <div class="card-image">
+    {% for photo in post.photos.all  %}
     <img
       class="materialboxed"
       width="650"
-      src="../../static/images/skku_logo.png"
+      src="{{photo.file.url}}"
       alt="썸네일"
     />
+    {% endfor %}
   </div>
   <div class="card-content">
     <span class="card-title activator grey-text text-darken-4"
