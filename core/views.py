@@ -1,7 +1,15 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, reverse
 
 # Create your views here.
 
 
 def IntroView(request):
-    return redirect()
+    home = reverse("core:home")
+
+    return render(
+        request,
+        "intro.html",
+        {
+            "home": home,
+        },
+    )
