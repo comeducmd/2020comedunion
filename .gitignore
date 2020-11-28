@@ -148,3 +148,6 @@ my_settings.py
 
 # frontend bak up
 frontend/static/*
+
+# media
+media/

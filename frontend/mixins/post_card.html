@@ -23,12 +23,14 @@
     <span class="card-title grey-text text-darken-4"
       >{{post.title}}<i class="material-icons right">close</i></span
     >
+    {% for photo in post.photos.all  %}
     <img
       class="materialboxed custom-img"
-      src="../../static/images/skku.jpg"
+      src="{{photo.file.url}}"
       width="650"
       alt="구체적사진"
     />
+    {% endfor %}
     <p>{{post.description}}</p>
     <p>{{post.team_name}}</p>
     <p>{{post.team_member}}</p>
