@@ -13,3 +13,15 @@ def IntroView(request):
             "home": home,
         },
     )
+
+
+def LoginPageView(request):
+    kakao_login = reverse("users:kakao-login")
+
+    return render(
+        request,
+        "users/login_page.html",
+        {
+            "kakao_login": kakao_login,
+        },
+    )

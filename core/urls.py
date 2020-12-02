@@ -6,5 +6,5 @@ app_name = "core"
 
 urlpatterns = [
     path("", core_views.IntroView, name="intro"),
-    path("home", post_views.HomeView.as_view(), name="home"),
+    path("home/", post_views.HomeView.as_view(), name="home"),
 ]

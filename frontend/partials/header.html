@@ -13,13 +13,13 @@
           ><i class="material-icons right">menu</i></a
         >
         <ul class="right hide-on-med-and-down">
-          <li><a href="../signin.html" title="SIGN IN">SIGN IN</a></li>
+          <li><a href="{% url "users:login" %}" title="SIGN IN">SIGN IN</a></li>
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="../signin.html" title="SIGN IN">SIGN IN</a></li>
+      <li><a href="{% url "users:login" %}" title="SIGN IN">SIGN IN</a></li>
       <li><a href="#">2020</a></li>
     </ul>
   </div>
