@@ -3,8 +3,6 @@ from django.utils.html import mark_safe
 from . import models
 
 # Register your models here.
-
-
 class PhotoInline(admin.TabularInline):
 
     model = models.Photo

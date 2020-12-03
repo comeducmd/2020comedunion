@@ -1,7 +1,6 @@
 from django.shortcuts import render, reverse
-
+from posts import models
 # Create your views here.
-
 
 def IntroView(request):
     home = reverse("core:home")
@@ -14,6 +13,16 @@ def IntroView(request):
         },
     )
 
+def SearchView(request):
+    search = reverse("core:search")
+
+    return render(
+        request,
+        "posts/post_search.html",
+        {
+            "search": search,
+        },
+    )
 
 def LoginPageView(request):
     kakao_login = reverse("users:kakao-login")
