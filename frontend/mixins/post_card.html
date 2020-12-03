@@ -13,13 +13,16 @@
     <span class="card-title activator grey-text text-darken-4"
       >{{post.title}}</span
     >
-    <i class="material-icons right" style="cursor: pointer">favorite_border</i>
     <p class="activator">{{post.description}}</p>
   </div>
   <div class="card-action custom-card-action">
     <a href="#">Code</a>
     <a href="#">Site</a>
     <a href="#">발표 영상</a>
+    <div
+      class="heart"
+      onclick="{% if 1 %}swalLoginEffect();{% else %}heartEffect(this);{% endif %}"
+    ></div>
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"
