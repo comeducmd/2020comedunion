@@ -7,7 +7,7 @@
             <form action="{% url 'core:search' %}" method="GET">
             <div class="input-field inline" style="position:absolute; right:2rem; width:17rem; ">
                 <i class="material-icons prefix">search</i>
-                <input id="search" type="text" name="searchWord" value="{{searchWord}}" style="color:white">
+                <input class="form-control" id="search" type="text" name="search_word" value="{{ rsearch_word }}" style="color:white">
                 <label for="search" style="font-size:1.2rem; height:3rem; line-height:3.4rem">Search</label>
             </div>
             </form>

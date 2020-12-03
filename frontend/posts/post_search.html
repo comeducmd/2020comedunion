@@ -3,13 +3,11 @@
 
 <div style="display: flex;justify-content: center;padding-top: 5rem;padding-bottom: 5rem;">
     <div id="container">
-        {% if posts.all %}
+        {% if posts %}
             {% for post in posts %} {% include 'mixins/post_card.html' with post=post %} {% endfor %}
-        {% elif search_term %}
-            <h1>????</h1>
-            <b>({{search_term}}) (을)를 찾을 수 없습니다.</b> 
+        {% elif q %}
+            {{q}} (을)를 찾을 수 없습니다. 
         {% endif %}
-        <h1>??</h1>
     </div>
 </div>
 <script>
