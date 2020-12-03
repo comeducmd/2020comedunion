@@ -7,5 +7,5 @@ app_name = "core"
 urlpatterns = [
     path("", core_views.IntroView, name="intro"),
     path("home/", post_views.HomeView.as_view(), name="home"),
-    path("search/", post_views.SearchFormView.as_view(), name="search"),
+    path("search/", post_views.search, name="search"),
 ]
