@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<div style="display: flex;justify-content: center;padding-top: 5rem;padding-bottom: 5rem;">
+    <div id="container">
+        {% if posts.all %}
+            {% for post in posts %} {% include 'mixins/post_card.html' with post=post %} {% endfor %}
+        {% elif search_term %}
+            <h1>????</h1>
+            <b>({{search_term}}) (을)를 찾을 수 없습니다.</b> 
+        {% endif %}
+        <h1>??</h1>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elems = document.querySelectorAll(".materialboxed");
+        const options = {};
+        const instances = M.Materialbox.init(elems, options);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const elems = document.querySelectorAll(".sidenav");
+        const options = {
+            edge: "right",
+        };
+        const instances = M.Sidenav.init(elems, options);
+    });
+</script>
+<script>
+    const heartEffect = (id) => {
+        id.classList.toggle("is-active");
+        setTimeout(() => {
+            id.classList.toggle("is-active");
+        }, 3000);
+    }
+    const swalLoginEffect = () => {
+        swal({
+            title: "로그인이 필요한 기능입니다.",
+            icon: "warning",
+            buttons: ["로그인하기", true]
+        }).then((value) => {
+            location.href = "/users/login"
+        })
+    }
+</script>
+{% endblock content %}
