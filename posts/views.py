@@ -3,11 +3,11 @@ from django.views.generic import ListView
 from django.views.generic.edit import FormView
 from . import models
 
-from .forms import PostSearchForm
+#from .forms import PostSearchForm
 from django.db.models import Q
 
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
+#from django.views.decorators.csrf import csrf_exempt
+#from django.utils.decorators import method_decorator
 
 class HomeView(ListView):
 
@@ -19,31 +19,38 @@ class HomeView(ListView):
     ordering = "pub_date"
     context_object_name = "posts"
 
-class SearchFormView(FormView):
+def search(request):
+	posts = models.Post.objects.all()
+	q = request.GET.get('search_word', '')
+	if q:
+		posts = posts.filter(title__icontains=q)
+	return render(request, 'posts/post_search.html', {'posts':posts, 'q':q})
+
+'''
+class SearchFormView(ListView):
 	form_class = PostSearchForm
 	template_name = "posts/post_search.html"
 
+	def get_queryset(self):
+		print('*')
+		query = self.request.GET.get('search_word')
+		if query:
+			posts = models.Post.objects.filter(title__icontains=query)
+		else:
+			posts = models.Post.objects.none()
+		return posts
+
 	def form_valid(self, form):
+		#print(form)
 		searchWord = form.cleaned_data['search_word']
-		post_list = Post.objects.filter(Q(title__icontains = searchWord)).distinct()
+		post_list = Post.objects.filter(
+				Q(title__icontains = searchWord) | Q(description__icontains=searchWord)
+			).distinct()
 
 		context = {}
 		context['form'] = form
-		context['search_term'] = searchWord
+		context['search_word'] = searchWord
 		context['posts'] = post_list
-
-		return render(
-			self.request, 
-			self.template_name, 
-			context
-		)
-
-'''
-def search(request):
-	posts = models.Post.objects.all()
-	q = request.GET['q']
-	if q:
-		posts = posts.objects.filter(title__icontains=q)
-	return render(request, 'posts/post_search.html', {'posts':posts, 'q':q})
+		return render(self.request, self.template_name, context)
 '''
 
