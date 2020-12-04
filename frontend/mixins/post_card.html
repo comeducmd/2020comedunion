@@ -21,7 +21,7 @@
     <a href="#">발표 영상</a>
     <div
       class="heart"
-      onclick="{% if 1 %}swalLoginEffect();{% else %}heartEffect(this);{% endif %}"
+      onclick="{% if user.is_authenticated %}heartEffect(this);{% else %}swalLoginEffect();{% endif %}"
     ></div>
   </div>
   <div class="card-reveal">
