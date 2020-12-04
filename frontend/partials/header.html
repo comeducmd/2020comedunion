@@ -13,13 +13,21 @@
           ><i class="material-icons right">menu</i></a
         >
         <ul class="right hide-on-med-and-down">
-          <li><a href="{% url "users:login" %}" title="SIGN IN">SIGN IN</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url "users:logout" %}" title="LOG OUT">LOG OUT</a></li>
+          {% else %}
+            <li><a href="{% url "users:login" %}" title="SIGN IN">SIGN IN</a></li>
+          {% endif %}
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="{% url "users:login" %}" title="SIGN IN">SIGN IN</a></li>
+      {% if user.is_authenticated %}
+          <li><a href="{% url "users:logout" %}" title="LOG OUT">LOG OUT</a></li>
+      {% else %}
+          <li><a href="{% url "users:login" %}" title="SIGN IN">SIGN IN</a></li>
+      {% endif %}
       <li><a href="#">2020</a></li>
     </ul>
   </div>

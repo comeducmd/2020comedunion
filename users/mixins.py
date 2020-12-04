@@ -15,4 +15,4 @@ class LoggedOutOnlyView(UserPassesTestMixin):
 
 class LoggedInOnlyView(LoginRequiredMixin):
 
-    login_url = reverse_lazy("users:kakao-login")
+    login_url = reverse_lazy("users:kakao-callback")
