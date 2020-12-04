@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.files.base import ContentFile
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from . import models
+from . import models, mixins
 
 # Create your views here.
 
@@ -58,8 +58,8 @@ def kakao_callback(request):
         """
         try:
             user = models.User.objects.get(email=email)
-            if user.login_method != models.User.LOGING_KAKAO:
-                raise KakaoException(f"Please log in with: {user.login_method}")
+            """if user.login_method != models.User.LOGING_KAKAO:
+                raise KakaoException(f"Please log in with: {user.login_method}")"""
         except models.User.DoesNotExist:
             user = models.User.objects.create(
                 email=email,
@@ -81,3 +81,9 @@ def kakao_callback(request):
     except KakaoException as e:
         messages.error(request, e)
         return redirect(reverse("users:login"))
+
+
+def log_out(request):
+    messages.info(request, f"See you later")
+    logout(request)
+    return redirect(reverse("core:home"))
