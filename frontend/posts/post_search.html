@@ -10,35 +10,6 @@
         {% endif %}
     </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const elems = document.querySelectorAll(".materialboxed");
-        const options = {};
-        const instances = M.Materialbox.init(elems, options);
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        const elems = document.querySelectorAll(".sidenav");
-        const options = {
-            edge: "right",
-        };
-        const instances = M.Sidenav.init(elems, options);
-    });
-</script>
-<script>
-    const heartEffect = (id) => {
-        id.classList.toggle("is-active");
-        setTimeout(() => {
-            id.classList.toggle("is-active");
-        }, 3000);
-    }
-    const swalLoginEffect = () => {
-        swal({
-            title: "로그인이 필요한 기능입니다.",
-            icon: "warning",
-            buttons: ["로그인하기", true]
-        }).then((value) => {
-            location.href = "/users/login"
-        })
-    }
-</script>
+<script src="./static/js/handle-materialize.js"></script>
+<script src="./static/js/handle-heart.js"></script>
 {% endblock content %}
