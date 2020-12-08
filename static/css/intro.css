@@ -28,16 +28,15 @@ body {
 	left: 10%;
 	width: 80%;
 	height: 60%;
-	padding: 40px 30px 10px 30px;
+	padding: 10px 30px 10px 30px;
 	background-color: white;
 	z-index:1002;
 	overflow: auto;
 }
 
 @media ( max-width: 768px ) {
-    #light > iframe {
-        width: 90%;
-        height: 80%;
+    iframe {
+      width: 90%;
     }
  }
 

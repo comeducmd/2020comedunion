@@ -41,17 +41,82 @@
         <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
           <span class="thick">축전 영상</span><span class="thin"> 보기</span>
         </a>
-        <div id="light" class="white_content">
+        <!-- <div id="light" class="white_content">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           
           <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <br /><br />
           <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">닫기</a>
         </div>
-        <div id="fade" class="black_overlay"></div>
-        <!-- <a href="#">
-          <span class="thick">축전 영상</span><span class="thin"> 보기</span>
-        </a> -->
+        <div id="fade" class="black_overlay"></div> -->
+
+        <!-- ajax 모달 -->
+        <div id="light" class="white_content">
+
+          <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" style="font-size: 0.8em;">닫기</a>
+          <br /><br />
+          <input type="button" value="안성진 교수님" style="font-size: 0.8em;" onclick="
+              fetch('1.html').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="김재현 교수님" style="font-size: 0.8em;" onclick="
+              fetch('2.html').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="박천수 교수님" style="font-size: 0.8em;" onclick="
+              fetch('1.html').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="나왑무하마드파시 교수님" style="font-size: 0.8em;" onclick="
+              fetch('2.html').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="류은석 교수님" style="font-size: 0.8em;" onclick="
+              fetch('1.html').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="김미량 교수님" style="font-size: 0.8em;" onclick="
+              fetch('2.html').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+          <br /><br />
+          <article>
+
+          </article>
+          
+        </div>
+        <div id="fade" class="black_overlay"></div>        
+      </div>
+
       </div>
       |
       <div class="link-1">
