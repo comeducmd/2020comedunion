@@ -1,38 +1,63 @@
 {% extends "base.html" %} {% block content %}
-<div style="display: flex;justify-content: center;padding-top: 5rem;padding-bottom: 5rem;">
-    <div id="container">
-        {% for post in posts %} {% include 'mixins/post_card.html' with post=post %} {% endfor %}
-    </div>
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  "
+>
+  <div id="container">
+    {% for post in posts %} {% include 'mixins/post_card.html' with post=post %}
+    {% endfor %}
+  </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const elems = document.querySelectorAll(".materialboxed");
-        const options = {};
-        const instances = M.Materialbox.init(elems, options);
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        const elems = document.querySelectorAll(".sidenav");
-        const options = {
-            edge: "right",
-        };
-        const instances = M.Sidenav.init(elems, options);
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    const elems = document.querySelectorAll(".materialboxed");
+    const options = {};
+    const instances = M.Materialbox.init(elems, options);
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const elems = document.querySelectorAll(".sidenav");
+    const options = {
+      edge: "right",
+    };
+    const instances = M.Sidenav.init(elems, options);
+  });
 </script>
 <script>
-    const heartEffect = (id) => {
-        id.classList.toggle("is-active");
-        setTimeout(() => {
-            id.classList.toggle("is-active");
-        }, 3000);
-    }
-    const swalLoginEffect = () => {
-        swal({
-            title: "로그인이 필요한 기능입니다.",
-            icon: "warning",
-            buttons: ["로그인하기", true]
-        }).then((value) => {
-            location.href = "/users/login"
-        })
-    }
+  const heartEffect = (id) => {
+    id.classList.toggle("is-active");
+    setTimeout(() => {
+      id.classList.toggle("is-active");
+    }, 3000);
+  };
+  const swalLoginEffect = () => {
+    swal({
+      title: "로그인이 필요한 기능입니다.",
+      icon: "warning",
+      buttons: ["로그인하기", true],
+    }).then((value) => {
+      location.href = "/users/login";
+    });
+  };
 </script>
+<div>
+  {% if page_obj.has_previous %}
+  <a href="?page={{page_obj.previous_page_number}}" class="text-teal-500">
+    <i class="fas fa-arrow-left fa-lg"></i>
+  </a>
+  {% endif %}
+
+  <span class="mx-3 font-medium text-lg"
+    >{{page_obj.number}} of {{page_obj.paginator.num_pages}}</span
+  >
+
+  {% if page_obj.has_next %}
+  <a href="?page={{page_obj.next_page_number}}" class="text-teal-500">
+    <i class="fas fa-arrow-right fa-lg"></i>
+  </a>
+  {% endif %}
+</div>
 {% endblock content %}
