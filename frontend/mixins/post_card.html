@@ -15,14 +15,14 @@
     >
     <p class="activator">{{post.description}}</p>
   </div>
+  <div
+    class="heart"
+    onclick="{% if user.is_authenticated %}heartEffect(this);{% else %}swalLoginEffect();{% endif %}"
+  ></div>
   <div class="card-action custom-card-action">
     <a href="#">Code</a>
-    <a href="#">Site</a>
-    <a href="#">발표 영상</a>
-    <div
-      class="heart"
-      onclick="{% if user.is_authenticated %}heartEffect(this);{% else %}swalLoginEffect();{% endif %}"
-    ></div>
+    <a href="{{post.pub_url}}">URL</a>
+    <a href="{{post.video_url}}">발표 영상</a>
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"
