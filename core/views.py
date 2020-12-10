@@ -13,17 +13,6 @@ def IntroView(request):
         },
     )
 
-def SearchView(request):
-    search = reverse("core:search")
-
-    return render(
-        request,
-        "posts/post_search.html",
-        {
-            "search": search,
-        },
-    )
-
 def LoginPageView(request):
     kakao_login = reverse("users:kakao-login")
 
