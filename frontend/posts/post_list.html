@@ -8,8 +8,11 @@
   "
 >
   <div id="container">
-    {% for post in posts %} {% include 'mixins/post_card.html' with post=post %}
-    {% endfor %}
+    {% if posts %} 
+    {% for post in posts %} {% include 'mixins/post_card.html' with post=post %} {% endfor %} 
+    {% else %}
+    작성된 게시글이 없습니다.
+    {% endif %}
   </div>
 </div>
 <div class="flex items-center justify-center mx-auto container">
