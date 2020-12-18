@@ -146,6 +146,48 @@ span.card-title.grey-text.text-darken-4 {
 }
 
 
+/* Paginator */
+
+.paginator {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    font-size: 1.6rem;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+}
+
+.paginator a {
+    font-size: 1.2rem;
+    border-radius: .4rem;
+    background-color: #073c64;
+    padding: .6rem;
+    padding-bottom: .9rem;
+    color: white;
+    box-shadow: 0 3px 8px 2px rgba(14, 15, 50, 0.3);
+    transition: .1s;
+}
+
+.paginator a:first-child {
+    border-top-left-radius: 1.7rem;
+    border-bottom-left-radius: 1.7rem;
+    padding-left: 1.1rem;
+}
+
+.paginator a:last-child {
+    border-top-right-radius: 1.7rem;
+    border-bottom-right-radius: 1.7rem;
+    padding-right: 1.1rem;
+}
+
+.paginator a:hover {
+    margin-bottom: -0.5rem;
+    box-shadow: none;
+}
+
+
 /* Drag */
 
 ::selection {
@@ -247,4 +289,9 @@ span.card-title.grey-text.text-darken-4 {
     padding: 10px 0px;
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08);
+}
+
+.page-footer .row {
+    margin-bottom: 0;
+    padding-bottom: 20px;
 }
