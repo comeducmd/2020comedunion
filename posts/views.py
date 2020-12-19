@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-#from django.views.generic.edit import FormView
+
+# from django.views.generic.edit import FormView
 from . import models
 
-#from .forms import PostSearchForm
+# from .forms import PostSearchForm
 from django.db.models import Q
-#from django.views.decorators.csrf import csrf_exempt
-#from django.utils.decorators import method_decorator
+
+# from django.views.decorators.csrf import csrf_exempt
+# from django.utils.decorators import method_decorator
+
 
 from django import template
 
@@ -19,27 +22,19 @@ class HomeView(ListView):
 
     model = models.Post
     paginate_by = 6
-    paginate_orphans = 5
+    paginate_orphans = 0
     ordering = "pub_date"
     context_object_name = "posts"
 
     def get_queryset(self):
         posts = models.Post.objects.all()
-        q = self.request.GET.get('search_word', '')
+        q = self.request.GET.get("search_word", "")
         if q:
             posts = posts.filter(title__icontains=q)
         return posts
 
 
-@register.filter(name='split')
-def split(value, key):
-    """
-        Returns the value turned into a list.
-    """
-    return value.split(key)[1]
-
-
-'''
+"""
 def search(request):
 	posts = models.Post.objects.all()
 	q = request.GET.get('search_word', '')
@@ -73,4 +68,8 @@ class SearchFormView(FormView):
 		else:
 			posts = models.Post.objects.none()
 		return posts
+<<<<<<< HEAD
 '''
+=======
+"""
+>>>>>> > 4e346aae2e94631431d958eab3777802314c9876
