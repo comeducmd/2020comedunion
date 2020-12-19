@@ -22,7 +22,7 @@
   <div class="card-action custom-card-action">
     <a href="#">Code</a>
     <a href="{{post.pub_url}}">URL</a>
-    <a href="{{post.video_url}}">발표 영상</a>
+    <a id="popOpenBtn1" href="{{post.video_url}}">발표 영상</a>
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"
@@ -39,5 +39,11 @@
     <p>{{post.description}}</p>
     <p>{{post.team_name}}</p>
     <p>{{post.team_member}}</p>
+  </div>
+  <!-- Modal Contents -->
+  <div id ="popup_mask" class="popupMask" ></div> <!-- Background -->
+
+  <div id="popup_div1" class="popupDiv"> <div id="popCloseBtn1">닫기</div>
+      <br /><br /> 내용 1
   </div>
 </div>
