@@ -62,7 +62,7 @@ header-wrapper {
 #banner {
     overflow: hidden;
     padding: 7em 0em 5em 0em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../static/images/banner2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../static/images/banner3.jpg");
     background-size: cover;
     text-align: center;
 }
