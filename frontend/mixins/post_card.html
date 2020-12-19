@@ -22,7 +22,9 @@
   <div class="card-action custom-card-action">
     <a href="#">Code</a>
     <a href="{{post.pub_url}}">URL</a>
-    <a id="popOpenBtn1" href="{{post.video_url}}">발표 영상</a>
+    <a id="{{post.title}}" class="popupBtn" href="#modal-{{post.title}}"
+      >발표 영상</a
+    >
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"
@@ -40,10 +42,19 @@
     <p>{{post.team_name}}</p>
     <p>{{post.team_member}}</p>
   </div>
-  <!-- Modal Contents -->
-  <div id ="popup_mask" class="popupMask" ></div> <!-- Background -->
-
-  <div id="popup_div1" class="popupDiv"> <div id="popCloseBtn1">닫기</div>
-      <br /><br /> 내용 1
-  </div>
+</div>
+<!-- Modal Contents -->
+<div class="popupMask"></div>
+<!-- Background -->
+<div class="popUp-{{post.title}} popupDiv">
+  <div class="popCloseBtn-{{post.title}}">닫기</div>
+  <!-- 밑의 src의 embed/ 뒤에 유튜브 영상 v= 뒷부분에 있는거 넣기 -->
+  <iframe
+    width="560"
+    height="315"
+    src="https://youtube.com/embed/"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
 </div>

@@ -1,19 +1,20 @@
-$(document).ready(function(){
-    $("#popOpenBtn1").click(function(event){  //팝업 Open 버튼 클릭 시 
-
-         $("#popup_div1").css({
-            "top": (($(window).height()-$("#popup_div1").outerHeight())/2+$(window).scrollTop())+"px",
-            "left": (($(window).width()-$("#popup_div1").outerWidth())/2+$(window).scrollLeft())+"px"
-         }); 
-        
-        $("#popup_mask").css("display","block");
-        $("#popup_div1").css("display","block");
-        $("body").css("overflow","hidden");
+$(document).ready(function() {
+    $(".popupBtn").click(function(event) { //팝업 Open 버튼 클릭 시 
+        const thisId = this.getAttribute('id');
+        console.log(thisId);
+        $(`div.popupDiv.popUp-${thisId}`).css({
+            "top": (($(window).height() - $(`div.popupDiv.popUp-${thisId}`).outerHeight()) / 2 + $(window).scrollTop()) + "px",
+            "left": (($(window).width() - $(`div.popupDiv.popUp-${thisId}`).outerWidth()) / 2 + $(window).scrollLeft()) + "px",
+            "display": "block"
+        });
+        $(".popupMask").css("display", "block");
+        $("body").css("overflow", "hidden");
+        $(`.popCloseBtn-${thisId}`).css("cursor", "pointer");
+        $(`.popCloseBtn-${thisId}`).click(function(event) {
+            $(".popupMask").css("display", "none");
+            $(`div.popupDiv.popUp-${thisId}`).css("display", "none");
+            $("body").css("overflow", "auto");
+        });
     });
-    
-    $("#popCloseBtn1").click(function(event){
-        $("#popup_mask").css("display","none");
-        $("#popup_div1").css("display","none");
-        $("body").css("overflow","auto");
-    });        
-}); 
+
+});

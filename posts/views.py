@@ -8,6 +8,11 @@ from django.db.models import Q
 #from django.views.decorators.csrf import csrf_exempt
 #from django.utils.decorators import method_decorator
 
+from django import template
+
+register = template.Library()
+
+
 class HomeView(ListView):
 
     """ HomeView Definition """
@@ -19,13 +24,21 @@ class HomeView(ListView):
     context_object_name = "posts"
 
     def get_queryset(self):
-    	posts = models.Post.objects.all()
-    	q = self.request.GET.get('search_word', '')
-    	if q:
-    		posts = posts.filter(title__icontains=q)
-    	return posts
+        posts = models.Post.objects.all()
+        q = self.request.GET.get('search_word', '')
+        if q:
+            posts = posts.filter(title__icontains=q)
+        return posts
 
- 	
+
+@register.filter(name='split')
+def split(value, key):
+    """
+        Returns the value turned into a list.
+    """
+    return value.split(key)[1]
+
+
 '''
 def search(request):
 	posts = models.Post.objects.all()
@@ -61,4 +74,3 @@ class SearchFormView(FormView):
 			posts = models.Post.objects.none()
 		return posts
 '''
-
