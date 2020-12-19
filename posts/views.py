@@ -68,8 +68,4 @@ class SearchFormView(FormView):
 		else:
 			posts = models.Post.objects.none()
 		return posts
-<<<<<<< HEAD
-'''
-=======
 """
->>>>>> > 4e346aae2e94631431d958eab3777802314c9876

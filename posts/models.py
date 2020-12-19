@@ -29,3 +29,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_video_url(self):
+        original_url = self.video_url
+        return original_url.split("?v=")[1]
