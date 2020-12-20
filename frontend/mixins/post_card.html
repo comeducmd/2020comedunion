@@ -1,17 +1,10 @@
 <div class="card custom-card">
-  <div class="card-image">
-    {% for photo in post.photos.all %}
-    <img
-      class="materialboxed"
-      width="650"
-      src="{{photo.file.url}}"
-      alt="썸네일"
-    />
-    {% endfor %}
-  </div>
-  <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4"
-      >{{post.title}}</span
+    <div class="card-image">
+        {% for photo in post.photos.all %}
+        <img class="materialboxed" width="650" src="{{photo.file.url}}" alt="썸네일" /> {% endfor %}
+    </div>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{post.title}}</span
     >
     <p class="activator">{{post.description}}</p>
   </div>
@@ -48,13 +41,13 @@
 <!-- Background -->
 <div class="popUp-{{post.title}} popupDiv">
   <div class="popCloseBtn-{{post.title}}">닫기</div>
-  <!-- 밑의 src의 embed/ 뒤에 유튜브 영상 v= 뒷부분에 있는거 넣기 -->
-  <iframe
-    width="560"
-    height="315"
-    src="https://youtube.com/embed/"
+  <div style="display: flex; justify-content:center">
+    <iframe
+    src="https://youtube.com/embed/{{post.get_video_url}}"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
-  ></iframe>
+    style="margin-top: 3rem"
+    ></iframe>
+  </div>
 </div>

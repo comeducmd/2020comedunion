@@ -312,8 +312,8 @@ span.card-title.grey-text.text-darken-4 {
 }
 
 .popupDiv iframe {
-    /*이거 잘 고쳐야 함*/
-    width: 90%;
+    width: 80%;
+    height: 400px;
 }
 
 .popupMask {
