@@ -32,4 +32,7 @@ class Post(models.Model):
 
     def get_video_url(self):
         original_url = self.video_url
-        return original_url.split("?v=")[1]
+        if "v=" in original_url:
+            return original_url.split("?v=")[1]
+        else:
+            return original_url.split("/")[-1]
