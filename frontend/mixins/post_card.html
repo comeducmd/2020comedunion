@@ -15,7 +15,7 @@
   <div class="card-action custom-card-action">
     <a href="#">Code</a>
     <a href="{{post.pub_url}}">URL</a>
-    <a id="{{post.title}}" class="popupBtn" href="#modal-{{post.title}}"
+    <a id="{{post.pk}}" class="popupBtn" href="#modal-{{post.pk}}"
       >발표 영상</a
     >
   </div>
@@ -39,8 +39,8 @@
 <!-- Modal Contents -->
 <div class="popupMask"></div>
 <!-- Background -->
-<div class="popUp-{{post.title}} popupDiv">
-  <div class="popCloseBtn-{{post.title}}">닫기</div>
+<div class="popUp-{{post.pk}} popupDiv">
+  <div class="popCloseBtn-{{post.pk}}">닫기</div>
   <div style="display: flex; justify-content:center">
     <iframe
     src="https://youtube.com/embed/{{post.get_video_url}}"
