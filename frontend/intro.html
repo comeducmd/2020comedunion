@@ -56,43 +56,7 @@
           <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" style="font-size: 0.8em;">닫기</a>
           <br /><br />
           <input type="button" value="안성진 교수님" style="font-size: 0.8em;" onclick="
-              fetch('1.html').then(function(response){
-                  response.text().then(function(text){
-                  //alert(text);
-                  document.querySelector('article').innerHTML=text;
-                  })
-              })
-          ">
-
-          <input type="button" value="김재현 교수님" style="font-size: 0.8em;" onclick="
-              fetch('2.html').then(function(response){
-                  response.text().then(function(text){
-                  //alert(text);
-                  document.querySelector('article').innerHTML=text;
-                  })
-              })
-          ">
-
-          <input type="button" value="박천수 교수님" style="font-size: 0.8em;" onclick="
-              fetch('1.html').then(function(response){
-                  response.text().then(function(text){
-                  //alert(text);
-                  document.querySelector('article').innerHTML=text;
-                  })
-              })
-          ">
-
-          <input type="button" value="나왑무하마드파시 교수님" style="font-size: 0.8em;" onclick="
-              fetch('2.html').then(function(response){
-                  response.text().then(function(text){
-                  //alert(text);
-                  document.querySelector('article').innerHTML=text;
-                  })
-              })
-          ">
-
-          <input type="button" value="류은석 교수님" style="font-size: 0.8em;" onclick="
-              fetch('1.html').then(function(response){
+              fetch('{{ video1 }}').then(function(response){
                   response.text().then(function(text){
                   //alert(text);
                   document.querySelector('article').innerHTML=text;
@@ -101,7 +65,34 @@
           ">
 
           <input type="button" value="김미량 교수님" style="font-size: 0.8em;" onclick="
-              fetch('2.html').then(function(response){
+              fetch('{{ video2 }}').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="김재현 교수님" style="font-size: 0.8em;" onclick="
+              fetch('{{ video3 }}').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="박천수 교수님" style="font-size: 0.8em;" onclick="
+              fetch('{{video4}}').then(function(response){
+                  response.text().then(function(text){
+                  //alert(text);
+                  document.querySelector('article').innerHTML=text;
+                  })
+              })
+          ">
+
+          <input type="button" value="류은석 교수님" style="font-size: 0.8em;" onclick="
+              fetch('{{video5}}').then(function(response){
                   response.text().then(function(text){
                   //alert(text);
                   document.querySelector('article').innerHTML=text;
