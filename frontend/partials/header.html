@@ -6,10 +6,13 @@
                     &nbsp;&nbsp;&nbsp;<img src="../static/images/skku_longLogo.png" class="skku_longLogo" />
                     <span class="major">&nbsp;컴퓨터교육과</span>
                 </div>
+                <!--
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons right">menu</i>
                 </a>
-                <ul class="right hide-on-med-and-down">
+                -->
+                <!--<ul class="right hide-on-med-and-down">-->
+                <ul class="right">
                     {% if user.is_authenticated %}
                     <li><a href="{% url "users:logout" %}" title="LOG OUT">LOG OUT</a></li>
                     {% else %}
@@ -18,7 +21,7 @@
                 </ul>
             </div>
         </nav>
-
+        <!--
         <ul class="sidenav" id="mobile-demo">
             {% if user.is_authenticated %}
             <li><a href="{% url "users:logout" %}" title="LOG OUT">LOG OUT</a></li>
@@ -27,5 +30,6 @@
             {% endif %}
             <li><a href="#">2020</a></li>
         </ul>
+         -->
     </div>
 </header>
