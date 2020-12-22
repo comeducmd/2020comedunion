@@ -200,7 +200,7 @@ span.card-title.grey-text.text-darken-4 {
 
 .heart {
     position: absolute;
-    right: -15px;
+    right: -25px;
     bottom: 30px;
     width: 100px;
     height: 100px;
@@ -215,6 +215,10 @@ span.card-title.grey-text.text-darken-4 {
 .is-active {
     transition-duration: 1s;
     background-position: -2800px 0;
+}
+
+p.activator {
+    width: 95%;
 }
 
 @media (max-width: 890px) {
