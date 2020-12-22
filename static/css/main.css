@@ -308,8 +308,8 @@ p.activator {
     top: 0px;
     position: absolute;
     background: white;
-    width: 50%;
-    height: 500px;
+    width: 60%;
+    height: 540px;
     padding: 10px;
     display: none;
     text-align: center;
@@ -317,7 +317,7 @@ p.activator {
 }
 
 .popupDiv iframe {
-    width: 80%;
+    width: 90%;
     height: 400px;
 }
 
@@ -330,4 +330,10 @@ p.activator {
     display: none;
     background-color: #000;
     opacity: 0.8;
+}
+
+@media (max-width: 890px) {
+    .popupDiv {
+        width: 90%;
+    }
 }
