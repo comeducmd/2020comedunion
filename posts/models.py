@@ -25,6 +25,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField(default=timezone.now)
     pub_url = models.URLField(blank=True)
     video_url = models.URLField(blank=True)
+    site_url = models.URLField(blank=True)
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
