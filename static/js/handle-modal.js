@@ -11,11 +11,15 @@ $(document).ready(function() {
         $("body").css("overflow", "hidden");
         $(`.popCloseBtn-${thisId}`).css("cursor", "pointer");
         $(`.popCloseBtn-${thisId}`).click(function(event) {
+            const iframe = $(`div.popupDiv.popUp-${thisId}`).children().last().children().first();
+            iframe[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo", "args":""}', '*');
             $(".popupMask").fadeOut();
             $(`div.popupDiv.popUp-${thisId}`).fadeOut('fast');
             $("body").css("overflow", "auto");
         });
         $(".popupMask").click(function(event) {
+            const iframe = $(`div.popupDiv.popUp-${thisId}`).children().last().children().first();
+            iframe[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo", "args":""}', '*');
             $(".popupMask").fadeOut();
             $(`div.popupDiv.popUp-${thisId}`).fadeOut('fast');
             $("body").css("overflow", "auto");
