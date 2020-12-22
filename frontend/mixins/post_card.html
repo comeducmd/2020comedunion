@@ -1,10 +1,19 @@
 <div class="card custom-card">
-    <div class="card-image">
-        {% for photo in post.photos.all %}
-        <img class="materialboxed" width="650" src="{{photo.file.url}}" alt="썸네일" /> {% endfor %}
-    </div>
-    <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4" style="height:2.3em">{{post.title}}</span
+  <div class="card-image">
+    {% for photo in post.photos.all %}
+    <img
+      class="materialboxed"
+      width="650"
+      src="{{photo.file.url}}"
+      alt="썸네일"
+    />
+    {% endfor %}
+  </div>
+  <div class="card-content">
+    <span
+      class="card-title activator grey-text text-darken-4"
+      style="height: 2.3em"
+      >{{post.title}}</span
     >
     <p class="activator">{{post.description|truncatechars:20}}</p>
   </div>
@@ -13,11 +22,9 @@
     onclick="{% if user.is_authenticated %}heartEffect(this);{% else %}swalLoginEffect();{% endif %}"
   ></div>
   <div class="card-action custom-card-action">
-    <a href="#">Code</a>
+    <a href="{{post.site_url}}">Code</a>
     <a href="{{post.pub_url}}">URL</a>
-    <a id="{{post.pk}}" class="popupBtn" href="#modal-{{post.pk}}"
-      >발표 영상</a
-    >
+    <a id="{{post.pk}}" class="popupBtn" href="#modal-{{post.pk}}">발표 영상</a>
   </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"
@@ -31,7 +38,7 @@
       alt="구체적사진"
     />
     {% endfor %}
-    <p>{{post.description}}</p>
+    <p>{{post.description|linebreaks}}</p>
     <p>{{post.team_name}}</p>
     <p>{{post.team_member}}</p>
   </div>
@@ -41,13 +48,13 @@
 <!-- Background -->
 <div class="popUp-{{post.pk}} popupDiv">
   <div class="popCloseBtn-{{post.pk}}">닫기</div>
-  <div style="display: flex; justify-content:center">
+  <div style="display: flex; justify-content: center">
     <iframe
-    src="https://youtube.com/embed/{{post.get_video_url}}"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    style="margin-top: 3rem"
+      src="https://youtube.com/embed/{{post.get_video_url}}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style="margin-top: 3rem"
     ></iframe>
   </div>
 </div>
