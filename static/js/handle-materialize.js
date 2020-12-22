@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const elems = document.querySelectorAll(".sidenav");
     const options = {
         edge: "right",
+        draggable: "true"
     };
     const instances = M.Sidenav.init(elems, options);
 });

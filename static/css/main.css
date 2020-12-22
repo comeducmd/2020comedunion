@@ -201,7 +201,7 @@ span.card-title.grey-text.text-darken-4 {
 .heart {
     position: absolute;
     right: -25px;
-    bottom: 30px;
+    top: -15px;
     width: 100px;
     height: 100px;
     background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
@@ -241,9 +241,6 @@ p.activator {
     }
     span.major {
         font-size: 1rem;
-    }
-    .heart {
-        bottom: 70px;
     }
 }
 
