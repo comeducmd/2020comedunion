@@ -6,9 +6,6 @@
 </h3>
 </div>
 
-### View Site on
-http://www.comedu.org/
-
 ### Contributors
 SKKU COMEDU Undergraduates
 
